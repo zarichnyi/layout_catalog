@@ -8,16 +8,26 @@
   border: 1px solid #f3f3f3;
   margin: 0 24px 50px;
 
-  &__image {
-    width: 160px;
-    height: 134px;
-    display: block;
-    margin: 30px auto;
-
+  &__container {
+    padding: 16px 14px 15px;
   }
 
-  &__container {
-    margin: 0 14px;
+  &__img-container {
+    padding-top: 14px;
+    max-width: $img-width;
+    display: block;
+    margin: 0 auto;
+    transition: 1s;
+    outline: 3px solid transparent;
+
+    &:hover {
+      @extend %img-hover;
+    }
+  }
+
+  &__image {
+    width: $img-width;
+    height: $img-height;
   }
 
   &__name {
@@ -78,10 +88,11 @@
 
   &__button {
     @include large-text(14px);
+    @extend %link-hover;
 
     width: 100%;
     height: 40px;
-    margin: 20px 0 15px;
+    margin-top: 20px;
     font-family: $f-family;
     background: $main-color;
     border-radius: 5px;

@@ -16,15 +16,30 @@
   }
 
   &__nav-list {
-    display: flex;
     justify-content: flex-end;
-  }
-  &__nav-link {
-    @include medium-text;
 
+  }
+
+  &__ul-item {
     display: flex;
     align-items: center;
+  }
+
+  &__li-item {
     margin-left: 20px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  &__nav-link {
+    @extend %link-hover;
+    @include medium-text;
+
+    height: $header-height;
+    display: flex;
+    align-items: center;
     color: #000;
     white-space: nowrap;
     text-transform: uppercase;
@@ -32,10 +47,6 @@
 
     &:hover {
       color: $main-color;
-    }
-
-    &:first-child {
-      margin: 0;
     }
 
     &--is-active {
