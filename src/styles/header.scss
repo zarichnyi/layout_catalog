@@ -34,7 +34,7 @@
   }
 
   &__nav-link {
-    @extend %link-hover;
+    @extend %link-transition;
     @include medium-text;
 
     height: $header-height;
