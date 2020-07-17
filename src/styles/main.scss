@@ -27,10 +27,11 @@ li {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: ($product-card-size * $count-card) + (($count-card - 1) * $gap-card);
   display: grid;
-  column-gap: 48px;
+  margin: 0 auto;
+  max-width: ($product-card-size * $count-card)
+    + (($count-card - 1) * $gap-card);
+  column-gap: $gap-card;
   row-gap: 50px;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, $product-card-size);
 }
