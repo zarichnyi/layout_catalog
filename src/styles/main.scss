@@ -24,14 +24,14 @@ li {
 
 .main {
   margin-top: 50px;
-  display: flex;
-  justify-content: center;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-grow: 0;
-  max-width: 1200px;
+  display: grid;
+  margin: 0 auto;
+  max-width: ($product-card-size * $count-card)
+    + (($count-card - 1) * $gap-card);
+  column-gap: $gap-card;
+  row-gap: 50px;
+  grid-template-columns: repeat(auto-fill, $product-card-size);
 }
